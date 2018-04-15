@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}{% endblock %}
+{% block content %}
+
+	<thead>
+
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/my.css' %}">
+        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <style type="text/css">
+			.gz{
+				/*border-style: solid;*/
+				border-width: 1px;
+				border-color: lightgrey;
+				width: 400px;
+				height: 128px;
+				float: left;
+				margin: auto;
+			}
+			.gz_span{
+				float: left;
+				height: 108px;
+				padding-left:5px ;
+			    position: relative;
+			    margin-top:5px;
+			    /*margin-bottom: 20px;*/
+			    padding-top: 10px;
+			}
+			.gz_span_right{
+				border-right-style:solid ;
+				border-right-color: lightgray;
+				border-right-width: 1px;}
+			.align-center{ 
+				margin-left:20px;
+			}
+
+		}
+		</style>
+	</thead>
+	<tbody>
+		
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#"><strong>工具合集</strong></a>
+		    </div>
+		
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#">办公<span class="sr-only">(current)</span></a></li>
+		        <li class="active"><a href="#">开发<span class="sr-only">(current)</span></a></li>
+		    
+		      </ul>
+		      <form class="navbar-form navbar-left">
+		        <div class="form-group">
+		          <input type="text" class="form-control" placeholder="Search">
+		        </div>
+		        <button type="submit" class="btn btn-default">搜索</button>
+		      </form>
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#">网址链接</a></li>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">选择 <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+				
+		<div class="gz">
+			<span class="gz_span gz_span_right" style="width: 124px;">
+			<img src="{% static 'img/piaochong.jpg' %}" style="padding-left: 20px"/>
+			</span>
+			<span class="gz_span " style="width: 200px;font-size:12px;">
+				<h5><strong style="color: blue;"><a href="{% url 'gdview' %}">工单生成器</a></strong></h5>
+				<ul>
+					<li>自动生成工单</li>
+					<li>支持模板校验</li>
+					<li><a href="#">使用说明文档</a></li>
+				</ul>
+			</span>
+		</div>
+		
+		
+			<span class="gz_span gz_span_right" style="width: 124px;">
+			<img src="{% static 'img/Alien Nakuhl.png' %}" style="padding-left: 20px"/>
+			</span>
+			<span class="gz_span " style="width: 200px;font-size:12px;">
+				<h5><strong style="color: blue;"><a href="#">性能监控<a></a></strong></h5>
+				<ul>
+					<li>性能模板订制</li>
+					<li>支持模板校验</li>
+					<li><a href="#">使用说明文档</a></li>
+				</ul>
+			</span>
+		</div>
+		
+		
+		
+		<br />
+		
+
+	</tbody>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}工单自动完成{% endblock %}
+{% block content %}
+
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#" ><strong>工单自动完成</strong></a>
+
+		    </div>
+		        <a class="navbar-brand" href="#" style="padding-left: 500px" >工单类型选择</a>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#"><select name="gdlx" style="width: 350px;">
+		        	<option value="defaut">--</option>
+		        	<option value="gd1">集团工单1</option>
+		        </select><span class="sr-only">(current)</span></a></li>
+		        
+		    	<li class="active" style="padding-top: 2px;"><input class="btn btn-default btn-lg active" type="submit" value="确认"><span class="sr-only">(current)</span></button></li>
+
+		      </ul>
+		</nav>
+		
+		
+		<div>
+				<table class="table table-hover"" style="font-family: '微软雅黑';">
+					<tr>
+					  <th>序号</th>
+					  <th>工单名</th>
+					  <th>月份</th>
+					  <th>文件名</th>
+					  <th>文件路径</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>xxxx</td>
+						<td>1月</td>
+						<td>xxxxx</td>
+						<td><a href="">下载</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>xxxx</td>
+						<td>1月</td>
+						<td>xxxxx</td>
+						<td><a href="">下载</a></td>
+					</tr>
+				</table>
+
+
+		</div>
+{% endblock %}

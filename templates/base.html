@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<meta charset="UTF-8">
+
+		<title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/my.css' %}">
+	</head>
+	<body>
+		<div id="top" >
+			<ul style="padding-top: 40px;margin-top: 0px ">
+				<li>
+                    <a href="{% url 'home' %}" class="ahref"><strong>首页</strong></a>
+					<a href="{% url 'tools' %}" class="ahref"><strong>无线技术</strong></a>
+					<a href="" class="ahref"><strong>开发技术</strong></a>
+					<a href="{% url 'tools' %}" class="ahref"><strong>工具合集</strong></a>
+				</li>
+			</ul>
+		</div>
+		<div align="center" id="pmd" style="height: 150px;border-bottom: solid gray">
+			<h1>站内公告</h1>
+		</div>
+        {% block content %}{% endblock %}
+	</body>
+</html>
